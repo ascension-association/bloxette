@@ -1,6 +1,6 @@
 # bloxette
 
-An ipset-based blocklist tool inspired by [banIP](https://github.com/openwrt/packages/blob/master/net/banip/files/README.md), [this ServerFault post](https://serverfault.com/a/1115842), and [this OpenWrt forum post](https://forum.openwrt.org/t/nftables-chokes-on-very-large-sets/172580).
+An ipset-based blocklist tool inspired by [banIP](https://github.com/openwrt/packages/blob/master/net/banip/files/README.md), [this ServerFault post](https://serverfault.com/a/1115842), [this ServerFault post](https://serverfault.com/a/675605), and [this OpenWrt forum post](https://forum.openwrt.org/t/nftables-chokes-on-very-large-sets/172580).
 
 ### Background
 
