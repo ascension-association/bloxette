@@ -40,7 +40,34 @@ if [ "$1" = "update" ]; then
 
   touch /tmp/bloxette/blocklist-raw /tmp/bloxette/blocklist-ipv4 /tmp/bloxette/blocklist-ipv6
   if [ -f /var/lib/bloxette/blocklists.txt ]; then
-    echo "TODO"
+    while IFS="" read -r line || [ -n "$line" ]
+    do
+      if [[ "$line" == "http"* ]]; then
+        curl -sL "$line" >> /tmp/bloxette/blocklist-raw
+      else
+        echo "$line" >> /tmp/bloxette/blocklist-raw
+      fi
+    done < /var/lib/bloxette/blocklists.txt
+  fi
+  if [ -f /tmp/bloxette/blocklist-raw ]; then
+    while IFS="" read -r line || [ -n "$line" ]
+    do
+      if [[ -z "$line" ]]; then
+        continue
+      elif [[ "$line" == "#"* ]]; then
+        continue
+      elif [[ "$line" == *"::"* ]]; then
+        echo "${line%% *}" >> /tmp/bloxette/blocklist-ipv6
+      else
+        echo "${line%% *}" >> /tmp/bloxette/blocklist-ipv4
+      fi
+    done < /tmp/bloxette/blocklist-raw
+  fi
+  if [ -f /tmp/bloxette/blocklist-ipv6 ]; then
+    cidr-merger -s /tmp/bloxette/blocklist-ipv6 > /tmp/bloxette/blocklist-ipv6-cidr
+  fi
+  if [ -f /tmp/bloxette/blocklist-ipv4 ]; then
+    cidr-merger -s /tmp/bloxette/blocklist-ipv4 > /tmp/bloxette/blocklist-ipv4-cidr
   fi
 fi
 
