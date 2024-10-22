@@ -8,21 +8,14 @@ I really, really wanted nftables named sets to work as advertised since iptables
 
 ### Prerequisites
 
-- [cidrmerge](https://sourceforge.net/projects/cidrmerge/) ([mirror](https://github.com/lizj3624/cidrmerge))
+- [cidr-merger](https://github.com/zhanhb/cidr-merger)
 
 ```
-cd /tmp
-sudo apt-get install -y curl gcc make libc6-dev
-curl -sLo cidrmerge.tar.gz https://sourceforge.net/projects/cidrmerge/files/cidrmerge/cidrmerge-1.5.3/cidrmerge-1.5.3.tar.gz/download
-tar -xf cidrmerge.tar.gz
-cd cidrmerge
-sudo mv cidrmerge /usr/local/bin/
-cd /tmp
-rm -rf ./cidrmerge*
-sudo apt-get autopurge -y gcc make libc6-dev
+sudo apt-get install golang-go
+sudo curl -sLo /usr/local/bin/cidr-merger https://github.com/zhanhb/cidr-merger/releases/latest/download/cidr-merger-linux-arm64
+sudo chmod +x /usr/local/bin/cidr-merger
 ```
 
-- awk
 - curl
 - iptables
 - ipset
@@ -32,7 +25,7 @@ sudo apt-get autopurge -y gcc make libc6-dev
 
 ```
 sudo apt-get autopurge -y nftables
-sudo apt-get install -y awk curl iptables ipset git cron jq
+sudo apt-get install -y curl iptables ipset git cron jq
 update-alternatives --set iptables /usr/sbin/iptables-legacy
 update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
 ```
@@ -44,7 +37,6 @@ sudo git clone https://github.com/ascension-association/bloxette /var/lib/bloxet
 sudo chown -R $USER:$USER /var/lib/bloxette
 chmod +x /var/lib/bloxette/bloxette.sh
 sudo ln -s /var/lib/bloxette/bloxette.sh /usr/local/bin/bloxette
-
 ```
 
 ### Configuration
