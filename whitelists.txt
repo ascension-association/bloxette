@@ -1,0 +1,29 @@
+# empty lines and comments starting with a hashtag are ignored
+
+# lines can be either IP or CIDR or URL (in either IPv4 or IPv6 format)
+127.0.0.1
+224.0.0.0/4
+240.0.0.0/4
+10.0.0.0/8
+172.16.0.0/12
+169.254.0.0/16
+192.168.0.0/16
+127.0.0.0/24
+100.64.0.0/10
+::1/128
+fc00::/7
+fe80::/64
+
+# CleanBrowsing
+185.228.168.168
+185.228.169.168
+2a0d:2a00:1::
+2a0d:2a00:2::
+
+# SafeSurfer
+104.197.28.121
+104.155.237.225
+
+# T145 Black Mirror
+https://github.com/T145/black-mirror/releases/download/latest/ALLOW_CIDR4.txt
+https://github.com/T145/black-mirror/releases/download/latest/ALLOW_CIDR6.txt

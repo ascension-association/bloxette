@@ -1,0 +1,11 @@
+# empty lines and comments starting with a hashtag are ignored
+
+# lines can be either IP or CIDR or URL (in either IPv4 or IPv6 format)
+
+# Firehol
+https://iplists.firehol.org/files/firehol_level1.netset
+https://iplists.firehol.org/files/firehol_anonymous.netset
+
+# banIP
+https://raw.githubusercontent.com/dibdot/DoH-IP-blocklists/refs/heads/master/doh-ipv4.txt
+https://raw.githubusercontent.com/dibdot/DoH-IP-blocklists/refs/heads/master/doh-ipv6.txt
