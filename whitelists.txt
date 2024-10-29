@@ -23,7 +23,3 @@ fe80::/64
 # SafeSurfer
 104.197.28.121
 104.155.237.225
-
-# T145 Black Mirror
-https://github.com/T145/black-mirror/releases/download/latest/ALLOW_CIDR4.txt
-https://github.com/T145/black-mirror/releases/download/latest/ALLOW_CIDR6.txt

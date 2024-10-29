@@ -4,8 +4,3 @@
 
 # Firehol
 https://iplists.firehol.org/files/firehol_level1.netset
-https://iplists.firehol.org/files/firehol_anonymous.netset
-
-# banIP
-https://raw.githubusercontent.com/dibdot/DoH-IP-blocklists/refs/heads/master/doh-ipv4.txt
-https://raw.githubusercontent.com/dibdot/DoH-IP-blocklists/refs/heads/master/doh-ipv6.txt
