@@ -1,0 +1,9 @@
+# empty lines and comments starting with a hashtag are ignored
+
+# add ISO 3166-1 alpha-2 country codes you wish to block traffic to/from: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
+
+# example using Cuba, Iran, North Korea, and Syria: https://www.bis.doc.gov/index.php/policy-guidance/country-guidance/sanctioned-destinations
+CU
+IR
+KP
+SY

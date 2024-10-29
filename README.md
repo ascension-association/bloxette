@@ -41,6 +41,6 @@ sudo ln -s /var/lib/bloxette/bloxette.sh /usr/local/bin/bloxette
 
 ### Configuration
 
-1. Edit /var/lib/bloxette/whitelists.txt and /var/lib/bloxette/blocklists.txt as needed
+1. Edit /var/lib/bloxette/whitelists.txt, /var/lib/bloxette/blocklists.txt, and /var/lib/bloxette/geo.txt as needed
 2. Run `bloxette update`
 3. Add to cron: `(crontab -l ; echo "2 30 * * * sleep $((RANDOM % 1800)) && /usr/local/bin/bloxette") | sudo crontab -`
